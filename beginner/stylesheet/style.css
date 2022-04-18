@@ -1,0 +1,11 @@
+.simple-text {
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+.not-simple-text {
+    padding: 10px;
+    color: limegreen;
+    border: 1px dotted limegreen;
+}
