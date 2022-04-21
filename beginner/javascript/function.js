@@ -93,7 +93,7 @@ console.log(arrowFunc, arrowFunc + 2);
 /* callback function */
 // calling a function inside a function
 // declare a function that has a function inside
-const myFunc = (thisFunc) => {
+const myFunc = thisFunc => {
     let a = 5;
     let b = 10;
     thisFunc(a, b);
