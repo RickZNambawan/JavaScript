@@ -99,6 +99,7 @@ const userOne = {
     age: 54
 }
 
+// cannot create instance of an object literal.
 const userTwo = userOne;
 console.log("userOne: ", userOne);
 console.log("userTwo: ", userTwo);
