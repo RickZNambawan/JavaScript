@@ -1,5 +1,10 @@
 let weather = {
     apiKey: "b861b9913e067b280cc0c01020c1101c",
+
+    init: function() {
+        this.fetchWeather('manila');
+    },
+    
     fetchWeather: function(city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`)
         .then(res => {
@@ -31,14 +36,14 @@ let weather = {
 }
 
 const searchBtn = document.querySelector("button");
-searchBtn.addEventListener('click', () => {
-    const searchBar = document.querySelector('.search-bar').value;
-    weather.fetchWeather(searchBar);
-    searchBar = "";
+const searchBar = document.querySelector('.search-bar');
+
+searchBtn.addEventListener('click', _event => {
+    weather.fetchWeather(searchBar.value);
+    searchBar.value = "";
 
 });
 
-const searchBar = document.querySelector('.search-bar');
 searchBar.addEventListener('keypress', event => {
     if(event.key === 'Enter') {
         weather.fetchWeather(searchBar.value);
@@ -46,5 +51,5 @@ searchBar.addEventListener('keypress', event => {
     }
 })
 
-weather.fetchWeather('manila');
+weather.init();
 

@@ -74,25 +74,3 @@
 //     // .catch(err => console.log('rejected', err.message));
 
 // console.log("haha");
-
-let count = 0;
-function cc(card) {
-  if(card <= 6) {
-    count++;
-  } else if(card >= 7 && card <= 9) {
-    let answer;
-} else {
-    count--;
-  }
-    
-  if (count > 0) {
-    return count + " Bet";
-  } else {
-    return count + " Hold";
-  }
-}
-
-// cc(2); cc(3); cc(7); cc('K'); cc('A');
-console.log(cc(7)); console.log(cc(8)); console.log(cc(9)); 
-// console.log(cc(2)); console.log(cc('J')); console.log(cc(9)); console.log(cc(2)); console.log(cc(7));
-// console.log(cc(2)); console.log(cc(2)); console.log(cc(10)); 
